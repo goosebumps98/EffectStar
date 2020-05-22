@@ -39,13 +39,14 @@ $effect->setVisible($effectvisible);
 
      switch($item->getId()){
 
-   case 399: //First Item which is a emerald btw
+   case $idofitem: //Now can be changed on config as of build #10
   $player->sendMessage(TF::GREEN . "Your wish has been granted");
   $player->addEffect($effect); //adds effect stated in config
   $effectid = $this->getConfig()->get("Effect ID");
   $effectduration = $this->getConfig()->get("Effect Duration");
   $effectamp = $this->getConfig()->get("Effect Amp");
   $effectvisible = $this->getConfig()->get("Effect Visible");
+  $idofitem = $this->getConfig()->get("Item ID");
 break;
      }
 }
